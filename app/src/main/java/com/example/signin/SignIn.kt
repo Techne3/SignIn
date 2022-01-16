@@ -11,12 +11,11 @@ import com.example.signin.databinding.SignInPageBinding
 class SignIn : Fragment() {
 
 
-    private var firstNameCheck = "tim@mail.com"
-    private var passwordCheck = "1234"
+    private var firstNameCheck = "tim@gmail.com"
+    private var passwordCheck = "123"
 
     // ? after type means nullable
     private var _binding: SignInPageBinding ? = null
-    // !! asserting non null, don't do too often can cause NPE(null pointer exception)
     private val binding: SignInPageBinding get() = _binding!!
 
 
@@ -40,16 +39,18 @@ class SignIn : Fragment() {
 
             nextBtn.setOnClickListener {
                 val bundle = Bundle()
-                bundle.putString("First", firstNameEt.editText?.text.toString())
-                bundle.putString("Password", passWordEt.editText?.text.toString())
+              val email  =  firstNameEt.editText?.text.toString()
+              val password =  passWordEt.editText?.text.toString()
 
-                if ("First" === firstNameCheck && "Password" === passwordCheck) {
+                bundle.putString("First",email)
+                bundle.putString("password", password)
+
+                if (email ==  firstNameCheck && password ==  passwordCheck){
+
                     parentFragmentManager.beginTransaction()
                         .replace(R.id.fragment_container_view, SuccessfulLogin::class.java, bundle)
                         .addToBackStack(null)
                         .commit()
-
-
                 } else {
                     parentFragmentManager.beginTransaction()
                         .replace(R.id.fragment_container_view, ErrorPage::class.java, bundle)
