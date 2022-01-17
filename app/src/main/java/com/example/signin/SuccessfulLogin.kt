@@ -28,8 +28,21 @@ class SuccessfulLogin : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         with(binding){
 
+
+            backBtn.setOnClickListener{
+                val bundle = Bundle()
+
+
+
+                parentFragmentManager.beginTransaction()
+                    .replace(R.id.fragment_container_view, SignIn::class.java, bundle)
+                    .addToBackStack(null)
+                    .commit()
+
+             }
+            }
         }
-    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()

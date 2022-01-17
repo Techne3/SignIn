@@ -1,14 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
-        android:id="@+id/textView"
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Success"
-        android:layout_marginLeft="200dp"
-        />
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvAllInboxes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Inboxes"
+            android:textSize="32sp"
+
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tvICloud"
+            app:layout_constraintVertical_chainStyle="packed"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvICloud"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="I Cloud"
+            android:textSize="32sp"
+
+            app:layout_constraintTop_toBottomOf="@+id/tvAllInboxes"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tvGmail" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvGmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Gmail"
+            android:textSize="32sp"
+
+            app:layout_constraintTop_toBottomOf="@+id/tvICloud"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tvHotmail" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvHotmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Hotmail"
+            android:textSize="32sp"
+
+            app:layout_constraintTop_toBottomOf="@+id/tvGmail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tvVIP" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvVIP"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="VIP"
+            android:textSize="32sp"
+
+            app:layout_constraintTop_toBottomOf="@+id/tvHotmail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tvSecure" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSecure"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Secure"
+            android:textSize="32sp"
+
+            app:layout_constraintTop_toBottomOf="@+id/tvVIP"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/tvNotifications" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvNotifications"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Notifications"
+            android:textSize="32sp"
+
+            app:layout_constraintTop_toBottomOf="@+id/tvSecure"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+
+            app:layout_constraintBottom_toTopOf="@+id/tvAllInboxes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

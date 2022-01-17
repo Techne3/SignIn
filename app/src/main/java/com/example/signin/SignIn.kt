@@ -11,7 +11,7 @@ import com.example.signin.databinding.SignInPageBinding
 class SignIn : Fragment() {
 
 
-    private var firstNameCheck = "tim@gmail.com"
+    private var emailCheck = "tim@gmail.com"
     private var passwordCheck = "123"
 
     // ? after type means nullable
@@ -45,7 +45,7 @@ class SignIn : Fragment() {
                 bundle.putString("First",email)
                 bundle.putString("password", password)
 
-                if (email ==  firstNameCheck && password ==  passwordCheck){
+                if (email ==  emailCheck && password ==  passwordCheck){
 
                     parentFragmentManager.beginTransaction()
                         .replace(R.id.fragment_container_view, SuccessfulLogin::class.java, bundle)
