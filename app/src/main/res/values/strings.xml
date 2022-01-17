@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">SignIn</string>
     <string name="Error_message">Your User Name and Password Don\'t match</string>
+    <string name="Oops">Oops Couldn\'t Sign In</string>
 </resources>
